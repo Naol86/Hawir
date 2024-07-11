@@ -1,3 +1,3 @@
 [submodule "Backend"]
 	path = Backend
-	url = https://github.com/hunderaweke/hawir-backend
+	url = git@github.com:hunderaweke/hawir-backend.git
