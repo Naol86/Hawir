@@ -1,0 +1,82 @@
+name: hawir
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^3.0.0-dev.3
+  riverpod_annotation: ^3.0.0-dev.3
+  hive: ^2.2.3
+  path_provider: ^2.1.3
+  hive_flutter: ^1.1.0
+  google_fonts: ^6.2.1
+  intl: ^0.19.0
+  flutter_svg: ^2.0.10+1
+  vector_graphics: ^1.1.11+1
+  dash_chat_2: ^0.0.21
+  flutter_gemini: ^2.0.4
+  google_generative_ai: ^0.4.3
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+  anim_search_bar: ^2.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  build_runner: ^2.4.11
+  flutter_lints: ^4.0.0
+  riverpod_generator: ^3.0.0-dev.11 
+  riverpod_lint: ^3.0.0-dev.4
+  flutter_gen: ^5.6.0
+
+
+flutter:
+
+ 
+  uses-material-design: true
+  assets:
+    - lib/assets/icons/hotel.svg
+    - lib/assets/icons/home.png
+    - lib/assets/icons/hotel.png
+    - lib/assets/icons/ai.png
+    - lib/assets/icons/ai2.png
+    - lib/assets/icons/map.png
+    - lib/assets/icons/booking.png
+    - lib/assets/icons/user.png
+    - lib/assets/icons/setting.png
+    - lib/assets/icons/car.png
+    - lib/assets/icons/place.png
+    - lib\assets\images\lalibela.jpg
+    - lib\assets\images\hotel1.jpg
+    - lib\assets\icons\book.png
+    - lib\assets\icons\group.png
+    - lib\assets\icons\forward.png
+    
+
+
+ 
+
+
+flutter_gen:
+  output: lib/gen/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  # Optional
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    rive: true
+    lottie: true
