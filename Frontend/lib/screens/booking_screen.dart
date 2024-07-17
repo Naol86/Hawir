@@ -11,7 +11,7 @@ class BookingScreen extends ConsumerWidget {
         bottomNavigationBar: bottomNavbar(context, ref),
         body: Center(
           child: Text(
-            'Hello from booking',
+            ' booking screen',
             style: TextStyle(fontSize: 40),
           ),
         ));

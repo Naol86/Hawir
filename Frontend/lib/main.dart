@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hawir/models/group.dart';
 import 'package:hawir/screens/hero_screen.dart';
 import 'package:hawir/screens/home_screen.dart';
 import 'package:hawir/screens/login_screen.dart';
@@ -14,6 +15,9 @@ void main() async {
 
   final dir = await getApplicationDocumentsDirectory();
   await Hive.initFlutter(dir.path);
+  Hive.registerAdapter<Group>(GroupAdapter());
+
+  await Hive.openBox('myGroupsBox');
 
   var userStateBox = await Hive.openBox('user_state');
 

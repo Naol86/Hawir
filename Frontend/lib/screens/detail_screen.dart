@@ -11,138 +11,137 @@ class DetailsScreen extends ConsumerWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-          child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              height: size.height / 2,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                image: DecorationImage(
-                    image:
-                        Image.asset(Assets.lib.assets.images.hotel1.path).image,
-                    fit: BoxFit.fill),
+          child: Container(
+        height: size.height,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: size.height / 2,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  image: DecorationImage(
+                      image:
+                          Image.asset(Assets.lib.assets.images.lalibela2.path)
+                              .image,
+                      fit: BoxFit.fill),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 35,
-                    width: 85,
-                    decoration: BoxDecoration(
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 85,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: Image.asset(
+                                      Assets.lib.assets.images.lalibela2.path)
+                                  .image,
+                              fit: BoxFit.cover)),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 85,
+                      decoration: BoxDecoration(
                         image: DecorationImage(
                             image: Image.asset(
-                                    Assets.lib.assets.images.hotel1.path)
+                                    Assets.lib.assets.images.lalibela2.path)
                                 .image,
-                            fit: BoxFit.cover)),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Container(
-                    height: 35,
-                    width: 85,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image:
-                              Image.asset(Assets.lib.assets.images.hotel1.path)
-                                  .image,
-                          fit: BoxFit.cover),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Container(
-                    height: 35,
-                    width: 85,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image:
-                              Image.asset(Assets.lib.assets.images.hotel1.path)
-                                  .image,
-                          fit: BoxFit.cover),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Price',
-                        style: TextStyle(
-                          fontFamily: 'poppines',
-                          fontSize: 20,
-                        ),
+                            fit: BoxFit.cover),
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            '\$370/',
-                            style: TextStyle(
-                              fontFamily: 'poppines',
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            'Night',
-                            style: TextStyle(
-                              fontFamily: 'poppines',
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                  ElevatedButton.icon(
-                    icon: ImageIcon(
-                      Assets.lib.assets.icons.book.image().image,
-                      color: Colors.white,
                     ),
-                    onPressed: () {},
-                    style: const ButtonStyle(
-                      iconSize: WidgetStatePropertyAll(20),
-                      shape: WidgetStatePropertyAll(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      )),
-                      backgroundColor:
-                          WidgetStatePropertyAll(AppColors.primaryColor),
-                      // fixedSize: WidgetStatePropertyAll(Size(100, 50)),
+                    const SizedBox(
+                      width: 5,
                     ),
-                    label: const Text('Book',
-                        style: TextStyle(
+                    Container(
+                      height: 35,
+                      width: 85,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: Image.asset(
+                                    Assets.lib.assets.images.lalibela2.path)
+                                .image,
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Budget',
+                          style: TextStyle(
                             fontFamily: 'poppines',
-                            fontSize: 18,
-                            color: Colors.white)),
-                  )
-                ],
+                            fontSize: 20,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              '\$370',
+                              style: TextStyle(
+                                fontFamily: 'poppines',
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    ElevatedButton.icon(
+                      icon: ImageIcon(
+                        Assets.lib.assets.icons.book.image().image,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {},
+                      style: const ButtonStyle(
+                        iconSize: WidgetStatePropertyAll(20),
+                        shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        )),
+                        backgroundColor:
+                            WidgetStatePropertyAll(AppColors.primaryColor),
+                        // fixedSize: WidgetStatePropertyAll(Size(100, 50)),
+                      ),
+                      label: const Text('Plan',
+                          style: TextStyle(
+                              fontFamily: 'poppines',
+                              fontSize: 18,
+                              color: Colors.white)),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 20,
-              ),
-              child: Expanded(
-                  child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada, arcu nec posuere viverra, ante urna bibendum arcu, nec accumsan leo eros non erat. Sed a tempor mi, a laoreet velit. Nam laoreet tristique volutpat. Vivamus ultrices leo sit amet dolor pulvinar, vitae malesuada quam malesuada.',
-                style: TextStyle(fontFamily: 'poppines', fontSize: 16),
-              )),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
+                child: Text(
+                  "The eleven Rock-hewn Churches of Lalibela are monolithic churches located in the western Ethiopian Highlands near the town of Lalibela, named after the late-12th and early-13th century King Gebre Meskel Lalibela of the Zagwe dynasty, who commissioned the massive building project of 11 rock-hewn churches to recreate the holy city of Jerusalem in his own kingdom.",
+                  style: TextStyle(
+                    fontFamily: 'poppines',
+                    fontSize: 16,
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       )),
     );

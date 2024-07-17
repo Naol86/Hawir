@@ -8,6 +8,12 @@ import 'package:hawir/widgets/bottom_navbar.dart';
 import 'package:hawir/widgets/float_action_button.dart';
 import 'package:intl/intl.dart';
 
+final List<List> category = [
+  ['Hotels', Assets.lib.assets.icons.hotel.image().image],
+  ['Places', Assets.lib.assets.icons.place.image().image],
+  ['Car', Assets.lib.assets.icons.car.image().image]
+];
+
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
@@ -151,7 +157,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 width: double.infinity,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 10,
+                  itemCount: category.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(
@@ -170,12 +176,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         child: Column(
                           children: [
                             ImageIcon(
-                              Assets.lib.assets.icons.hotelPng.image().image,
+                              category[index][1],
                               color: AppColors.primaryColor,
                               size: 40,
                             ),
                             Text(
-                              'Hotels',
+                              category[index][0],
                               style: GoogleFonts.poppins(
                                 fontSize: 18,
                               ),
@@ -199,9 +205,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     child: PageView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        getImage(600),
-                        getImage(602),
-                        getImage(603),
+                        getImage(
+                            "https://media.cnn.com/api/v1/images/stellar/prod/160719115801-ethiopia11-gelada-baboons-in-simien-mountains-national-park-c-ethiopian-tourism-organization.jpg?q=w_1900,h_1069,x_0,y_0,c_fill"),
+                        getImage(
+                            "https://www.wildfrontierstravel.com/media/cache/page_image_large/upload/mirror/www-wildfrontierstravel-com/c7950aeb_Blue%20Nile%20falls,%20Bahar%20Dar%20-%20dreamstime_xxl_50824786.jpeg"),
+                        getImage(
+                            "https://oddviser.com/photo/place/1600/1057.jpg"),
                       ],
                     ),
                   ),
@@ -269,7 +278,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     BorderRadius.all(Radius.circular(10)),
                                 image: DecorationImage(
                                     image: NetworkImage(
-                                        "https://picsum.photos/id/600/2000/1200"),
+                                        "https://lh3.googleusercontent.com/p/AF1QipNrLZDW_Q8w9B_FYR1tXG-dVYuZMMWGrOfQ3WVH=s680-w680-h510"),
                                     fit: BoxFit.fill),
                               ),
                             ),
@@ -296,7 +305,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   ),
                                 ),
                                 child: const Text(
-                                  'Place to visit',
+                                  'Rock-Hewn Churches, Lalibela',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -319,13 +328,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 }
 
-Widget getImage(int id) {
+// final places =
+
+Widget getImage(String link) {
   return ClipRRect(
     borderRadius: BorderRadius.circular(20),
     child: Container(
       color: Colors.red,
       child: Image.network(
-        "https://picsum.photos/id/$id/2000/1200",
+        link,
         fit: BoxFit.fill,
       ),
     ),

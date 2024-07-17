@@ -30,6 +30,7 @@ dependencies:
   flutter_map: ^7.0.2
   latlong2: ^0.9.1
   anim_search_bar: ^2.0.3
+  hive_generator: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -48,7 +49,6 @@ flutter:
  
   uses-material-design: true
   assets:
-    - lib/assets/icons/hotel.svg
     - lib/assets/icons/home.png
     - lib/assets/icons/hotel.png
     - lib/assets/icons/ai.png
@@ -64,6 +64,11 @@ flutter:
     - lib\assets\icons\book.png
     - lib\assets\icons\group.png
     - lib\assets\icons\forward.png
+    - lib\assets\images\lalibela1.jpg
+    - lib\assets\images\lalibela2.jpg
+    - lib\assets\images\pic1.jpg
+    - lib\assets\images\pic2.jpg
+    - lib\assets\images\pic3.jpg
     
 
 

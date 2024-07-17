@@ -8,9 +8,6 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:vector_graphics/vector_graphics.dart';
 
 class $LibGen {
   const $LibGen();
@@ -59,11 +56,7 @@ class $LibAssetsIconsGen {
   AssetGenImage get home => const AssetGenImage('lib/assets/icons/home.png');
 
   /// File path: lib/assets/icons/hotel.png
-  AssetGenImage get hotelPng =>
-      const AssetGenImage('lib/assets/icons/hotel.png');
-
-  /// File path: lib/assets/icons/hotel.svg
-  SvgGenImage get hotelSvg => const SvgGenImage('lib/assets/icons/hotel.svg');
+  AssetGenImage get hotel => const AssetGenImage('lib/assets/icons/hotel.png');
 
   /// File path: lib/assets/icons/map.png
   AssetGenImage get map => const AssetGenImage('lib/assets/icons/map.png');
@@ -79,7 +72,7 @@ class $LibAssetsIconsGen {
   AssetGenImage get user => const AssetGenImage('lib/assets/icons/user.png');
 
   /// List of all assets
-  List<dynamic> get values => [
+  List<AssetGenImage> get values => [
         ai,
         ai2,
         book,
@@ -88,8 +81,7 @@ class $LibAssetsIconsGen {
         forward,
         group,
         home,
-        hotelPng,
-        hotelSvg,
+        hotel,
         map,
         place,
         setting,
@@ -108,8 +100,16 @@ class $LibAssetsImagesGen {
   AssetGenImage get lalibela =>
       const AssetGenImage('lib/assets/images/lalibela.jpg');
 
+  /// File path: lib/assets/images/lalibela1.jpg
+  AssetGenImage get lalibela1 =>
+      const AssetGenImage('lib/assets/images/lalibela1.jpg');
+
+  /// File path: lib/assets/images/lalibela2.jpg
+  AssetGenImage get lalibela2 =>
+      const AssetGenImage('lib/assets/images/lalibela2.jpg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [hotel1, lalibela];
+  List<AssetGenImage> get values => [hotel1, lalibela, lalibela1, lalibela2];
 }
 
 class Assets {
@@ -191,83 +191,6 @@ class AssetGenImage {
       _assetName,
       bundle: bundle,
       package: package,
-    );
-  }
-
-  String get path => _assetName;
-
-  String get keyName => _assetName;
-}
-
-class SvgGenImage {
-  const SvgGenImage(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  }) : _isVecFormat = false;
-
-  const SvgGenImage.vec(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  }) : _isVecFormat = true;
-
-  final String _assetName;
-  final Size? size;
-  final Set<String> flavors;
-  final bool _isVecFormat;
-
-  SvgPicture svg({
-    Key? key,
-    bool matchTextDirection = false,
-    AssetBundle? bundle,
-    String? package,
-    double? width,
-    double? height,
-    BoxFit fit = BoxFit.contain,
-    AlignmentGeometry alignment = Alignment.center,
-    bool allowDrawingOutsideViewBox = false,
-    WidgetBuilder? placeholderBuilder,
-    String? semanticsLabel,
-    bool excludeFromSemantics = false,
-    SvgTheme? theme,
-    ColorFilter? colorFilter,
-    Clip clipBehavior = Clip.hardEdge,
-    @deprecated Color? color,
-    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
-    @deprecated bool cacheColorFilter = false,
-  }) {
-    final BytesLoader loader;
-    if (_isVecFormat) {
-      loader = AssetBytesLoader(
-        _assetName,
-        assetBundle: bundle,
-        packageName: package,
-      );
-    } else {
-      loader = SvgAssetLoader(
-        _assetName,
-        assetBundle: bundle,
-        packageName: package,
-        theme: theme,
-      );
-    }
-    return SvgPicture(
-      loader,
-      key: key,
-      matchTextDirection: matchTextDirection,
-      width: width,
-      height: height,
-      fit: fit,
-      alignment: alignment,
-      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
-      placeholderBuilder: placeholderBuilder,
-      semanticsLabel: semanticsLabel,
-      excludeFromSemantics: excludeFromSemantics,
-      colorFilter: colorFilter ??
-          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
-      clipBehavior: clipBehavior,
-      cacheColorFilter: cacheColorFilter,
     );
   }
 

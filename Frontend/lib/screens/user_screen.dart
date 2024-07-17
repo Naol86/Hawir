@@ -11,7 +11,7 @@ class UserScreen extends ConsumerWidget {
         bottomNavigationBar: bottomNavbar(context, ref),
         body: Center(
           child: Text(
-            'Hello from user',
+            'user screen',
             style: TextStyle(fontSize: 40),
           ),
         ));
